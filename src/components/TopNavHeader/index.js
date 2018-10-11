@@ -33,8 +33,9 @@ export default class TopNavHeader extends PureComponent {
           <div className={styles.left}>
             <div className={styles.logo} key="logo" id="logo">
               <Link to="/">
+                <h2>Ant Design Pro</h2>
                 <img src={logo} alt="logo" />
-                <h1>Ant Design Pro</h1>
+                <h1>hello world...</h1>
               </Link>
             </div>
             <div

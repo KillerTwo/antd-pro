@@ -134,6 +134,7 @@ export default {
           name: 'basic',
           component: './Profile/BasicProfile',
         },
+        
         {
           path: '/profile/advanced',
           name: 'advanced',
