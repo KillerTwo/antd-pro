@@ -12,7 +12,9 @@ import { formatMessage } from 'umi/locale';
 import SiderMenu from '@/components/SiderMenu';
 import Authorized from '@/utils/Authorized';
 import SettingDrawer from '@/components/SettingDrawer';
-import logo from '../assets/logo.svg';
+// import logo from '../assets/logo.svg';
+// import logo from '../assets/title-01.svg';
+import logo from '../assets/palice.svg';
 import Footer from './Footer';
 import Header from './Header';
 import Context from './MenuContext';
@@ -109,6 +111,7 @@ class BasicLayout extends React.PureComponent {
     dispatch({
       type: 'menuTree/getMenu',
     });
+    // 请求当前登录的用户的信息
     dispatch({
       type: 'user/fetchCurrent',
     });
@@ -162,22 +165,6 @@ class BasicLayout extends React.PureComponent {
     console.log('传递给formater的函数：', routes);
     return memoizeOneFormatter(routes);
   }
-  // getMenuData() {
-  //   // const {
-  //   //       route: { routes },
-  //   //    } = this.props;
-  //   // console.log("getMenuData routes: ",routes);
-  //   const { dispatch } = this.props;
-  //   dispatch({
-  //     type: 'menuTree/getMenu',
-  //   });
-  //   const { menuTree } = this.props;
-  //   console.log("getMenuData menuTree: ", menuTree);
-  //   const { menuData } = menuTree;
-  //   console.log("getMenuData menuData: ", menuData);
-  //   console.log("memoizeOneFormatter(menuData): ",memoizeOneFormatter(menuData));
-  //   return memoizeOneFormatter(menuData);
-  // }
 
   /**
    * 获取面包屑映射
@@ -254,7 +241,7 @@ class BasicLayout extends React.PureComponent {
       payload: collapsed,
     });
   };
-
+  // 渲染个性化设置选项（setting）
   renderSettingDrawer() {
     // Do not render SettingDrawer in production
     // unless it is deployed in preview.pro.ant.design as demo
@@ -273,8 +260,8 @@ class BasicLayout extends React.PureComponent {
       children,
       location: { pathname },
     } = this.props;
-    console.log('BasicLayout this.props: ', this.props);
-    console.log('BasicLayout pathname : ', pathname);
+    // console.log('BasicLayout this.props: ', this.props);
+    // console.log('BasicLayout pathname : ', pathname);
     // const { isMobile, menuData, newMenuData } = this.state;
     const { isMobile, newMenuData } = this.state;
     // const { menuTree } = this.props;
@@ -284,7 +271,7 @@ class BasicLayout extends React.PureComponent {
     // const menuList = this.getMenuData();
     const isTop = PropsLayout === 'topmenu';
     const routerConfig = this.matchParamsPath(pathname);
-    console.log('BasicLayout routerConfig : ', routerConfig);
+    // console.log('BasicLayout routerConfig : ', routerConfig);
     const layout = (
       <Layout>
         {isTop && !isMobile ? null : (
@@ -331,7 +318,7 @@ class BasicLayout extends React.PureComponent {
             )}
           </ContainerQuery>
         </DocumentTitle>
-        {this.renderSettingDrawer()}
+        {/* {this.renderSettingDrawer()} */}
       </React.Fragment>
     );
   }

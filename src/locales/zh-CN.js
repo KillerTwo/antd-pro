@@ -107,6 +107,20 @@ export default {
   'menu.account.trigger': '触发报错',
   'menu.account.logout': '退出登录',
   'menu.addpage': '新增一个页面',
+   // echarts图
+  'menu.Line': '折线图',
+  'menu.Bar': '柱状图',
+  'menu.Pie': '饼图',
+  'menu.Scatter': '散点图',
+  'menu.Candlestick': 'K线图',
+  'menu.Radar': '雷达图',
+  'menu.Parallel': '平行坐标图',
+  'menu.Sankey': '桑基图',
+  'menu.Funnel': '漏斗图',
+  'menu.Gauge': '仪表盘',
+  'menu.Dataset': '数据集',
+  
+
 
   'app.login.tab-login-credentials': '账户密码登录',
   'app.login.tab-login-mobile': '手机号登录',

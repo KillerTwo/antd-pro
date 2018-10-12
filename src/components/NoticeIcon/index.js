@@ -28,16 +28,20 @@ export default class NoticeIcon extends PureComponent {
   };
 
   onTabChange = tabType => {
+    console.log("消息通知中切换tab项。。。tab类型是： ",tabType);
     const { onTabChange } = this.props;
     onTabChange(tabType);
   };
 
   getNotificationBox() {
     const { children, loading, locale, onClear } = this.props;
+    console.log("props中的children ",children);
     if (!children) {
       return null;
     }
     const panes = React.Children.map(children, child => {
+      // console.log("通知getNotificationBox children",children);
+      // console.log("通知getNotificationBox child",child);
       const title =
         child.props.list && child.props.list.length > 0
           ? `${child.props.title} (${child.props.list.length})`
@@ -47,7 +51,9 @@ export default class NoticeIcon extends PureComponent {
           <List
             {...child.props}
             data={child.props.list}
+            // 点击一项消息
             onClick={item => this.onItemClick(item, child.props)}
+            // 清空消息
             onClear={() => onClear(child.props.name)}
             title={child.props.title}
             locale={locale}
@@ -71,6 +77,7 @@ export default class NoticeIcon extends PureComponent {
     const NoticeBellIcon = bell || <Icon type="bell" className={styles.icon} />;
     const trigger = (
       <span className={noticeButtonClass}>
+        {/* 消息的条数 */}
         <Badge count={count} style={{ boxShadow: 'none' }} className={styles.badge}>
           {NoticeBellIcon}
         </Badge>

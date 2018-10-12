@@ -3,6 +3,94 @@ export default {
   'GET /api/getMenuTree': [
     // dashboard
     { path: '/', redirect: '/dashboard/analysis' },
+    // 折线图
+    {
+      path: '/echarts/line',
+      component: './mypage/Mypage',
+      name: 'Line',
+      icon: 'line-chart',
+      routes: [],
+    },
+    //饼图
+    {
+      path: '/echarts/pie',
+      component: './mypage/Mypage',
+      name: 'Pie',
+      icon: 'pie-chart',
+      routes: [],
+    },
+    //柱状图
+    {
+      path: '/echarts/bar',
+      component: './mypage/Mypage',
+      name: 'Bar',
+      icon: 'bar-chart',
+      routes: [],
+    },
+    //散点图
+    {
+      path: '/echarts/scatter',
+      component: './mypage/Mypage',
+      name: 'Scatter',
+      icon: 'dot-chart',
+      routes: [],
+    },
+    //K线图
+    {
+      path: '/echarts/candlestick',
+      component: './mypage/Mypage',
+      name: 'Candlestick',
+      icon: 'line-chart',
+      routes: [],
+    },
+     //雷达图
+     {
+      path: '/echarts/radar',
+      component: './mypage/Mypage',
+      name: 'Radar',
+      icon: 'radar-chart',
+      routes: [],
+    },
+    //平行坐标图
+    {
+      path: '/echarts/parallel',
+      component: './mypage/Mypage',
+      name: 'Parallel',
+      icon: 'line-chart',
+      routes: [],
+    },
+     //桑基图
+     {
+      path: '/echarts/sankey',
+      component: './mypage/Mypage',
+      name: 'Sankey',
+      icon: 'line-chart',
+      routes: [],
+    },
+    //仪表盘
+    {
+      path: '/echarts/gauge',
+      component: './mypage/Mypage',
+      name: 'Gauge',
+      icon: 'line-chart',
+      routes: [],
+    },
+    //漏斗图
+    {
+      path: '/echarts/funnel',
+      component: './mypage/Mypage',
+      name: 'Funnel',
+      icon: 'fund',
+      routes: [],
+    },
+    //数据集
+    {
+      path: '/echarts/dataset',
+      component: './mypage/Mypage',
+      name: 'Dataset',
+      icon: 'line-chart',
+      routes: [],
+    },
     {
       path: '/dashboard',
       name: 'dashboard',

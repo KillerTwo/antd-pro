@@ -3,7 +3,9 @@ export default {
   // 支持值为 Object 和 Array
   'GET /api/currentUser': {
     name: 'Serati Ma',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+    
+    //avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+    avatar: 'https://www.easyicon.net/download/ico/536852/128/',
     userid: '00000001',
     email: 'antdesign@alipay.com',
     signature: '海纳百川，有容乃大',
@@ -35,6 +37,7 @@ export default {
         label: '海纳百川',
       },
     ],
+    // 消息通知数量（有几条消息）
     notifyCount: 12,
     country: 'China',
     geographic: {

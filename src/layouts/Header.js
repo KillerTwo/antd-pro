@@ -41,8 +41,9 @@ class HeaderView extends PureComponent {
     }
     return collapsed ? 'calc(100% - 80px)' : 'calc(100% - 256px)';
   };
-
+  // 清空消息通知
   handleNoticeClear = type => {
+    console.log("清空消息通知。。。type",type);
     message.success(`${formatMessage({ id: 'component.noticeIcon.cleared' })} ${formatMessage({ id: `component.globalHeader.${type}` })}`);
     const { dispatch } = this.props;
     dispatch({
@@ -50,8 +51,9 @@ class HeaderView extends PureComponent {
       payload: type,
     });
   };
-
+  // 点击用户头像，下拉列表事件
   handleMenuClick = ({ key }) => {
+    console.log("点击用户头像，下拉列表事件: ",key);
     const { dispatch } = this.props;
     if (key === 'userCenter') {
       router.push('/account/center');
@@ -71,7 +73,7 @@ class HeaderView extends PureComponent {
       });
     }
   };
-
+  // 点击显示通知消息，去请求消息通知
   handleNoticeVisibleChange = visible => {
     if (visible) {
       const { dispatch } = this.props;

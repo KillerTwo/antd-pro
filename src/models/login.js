@@ -60,11 +60,13 @@ export default {
         type: 'changeLoginStatus',
         payload: {
           status: false,
+          //退出之后将当前用户权限设置为guest
           currentAuthority: 'guest',
         },
       });
       reloadAuthorized();
       yield put(
+        // 跳转到登录页面
         routerRedux.push({
           pathname: '/user/login',
           search: stringify({
@@ -77,7 +79,8 @@ export default {
 
   reducers: {
     changeLoginStatus(state, { payload }) {
-      console.log('models中的changeLoginStatus函数被调用：', payload);
+      // console.log('models中的changeLoginStatus函数被调用：', payload);
+      // 退出之后将当前用户权限设置为guest
       setAuthority(payload.currentAuthority);
       return {
         ...state,

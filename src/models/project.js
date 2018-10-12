@@ -10,6 +10,7 @@ export default {
   effects: {
     *fetchNotice(_, { call, put }) {
       const response = yield call(queryProjectNotice);
+      console.log("project models fetchNotice response: ",response);
       yield put({
         type: 'saveNotice',
         payload: Array.isArray(response) ? response : [],

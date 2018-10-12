@@ -51,6 +51,7 @@ export default class GlobalHeaderRight extends PureComponent {
     } = this.props;
     const menu = (
       <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
+        {/* 点击某一项的时候回触发onMenuClick函数并将userCenter作为参数传递 */}
         <Menu.Item key="userCenter">
           <Icon type="user" />
           <FormattedMessage id="menu.account.center" defaultMessage="account center" />
@@ -85,14 +86,16 @@ export default class GlobalHeaderRight extends PureComponent {
             formatMessage({ id: 'component.globalHeader.search.example2' }),
             formatMessage({ id: 'component.globalHeader.search.example3' }),
           ]}
+          // 头部搜索框点击搜索
           onSearch={value => {
             console.log('input', value); // eslint-disable-line
           }}
+          // 头部搜索框按下enter键搜索
           onPressEnter={value => {
             console.log('enter', value); // eslint-disable-line
           }}
         />
-        <Tooltip title={formatMessage({ id: 'component.globalHeader.help' })}>
+        {/* <Tooltip title={formatMessage({ id: 'component.globalHeader.help' })}>
           <a
             target="_blank"
             href="https://pro.ant.design/docs/getting-started"
@@ -101,10 +104,11 @@ export default class GlobalHeaderRight extends PureComponent {
           >
             <Icon type="question-circle-o" />
           </a>
-        </Tooltip>
+        </Tooltip> */}
         <NoticeIcon
           className={styles.action}
           count={currentUser.notifyCount}
+          // 点击消息通知中的其中一项事件
           onItemClick={(item, tabProps) => {
             console.log(item, tabProps); // eslint-disable-line
           }}
@@ -154,7 +158,8 @@ export default class GlobalHeaderRight extends PureComponent {
         ) : (
           <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
         )}
-        <SelectLang className={styles.action} />
+        {/* 语言选择 */}
+        {/* <SelectLang className={styles.action} /> */}
       </div>
     );
   }

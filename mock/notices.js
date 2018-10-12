@@ -1,5 +1,6 @@
 const getNotices = (req, res) =>
   res.json([
+    // 通知
     {
       id: '000000001',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
@@ -36,6 +37,7 @@ const getNotices = (req, res) =>
       datetime: '2017-08-07',
       type: 'notification',
     },
+    // 消息
     {
       id: '000000006',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
@@ -60,6 +62,7 @@ const getNotices = (req, res) =>
       datetime: '2017-08-07',
       type: 'message',
     },
+    // 待办事件列表
     {
       id: '000000009',
       title: '任务名称',

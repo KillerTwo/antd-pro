@@ -11,7 +11,8 @@ export default {
   effects: {
     *fetchNotices(_, { call, put }) {
       let data = yield call(queryNotices);
-      data = data.msg;
+      console.log("global fetchNotices data: ", data);
+      //data = data.msg;
       yield put({
         type: 'saveNotices',
         payload: data,

@@ -279,8 +279,9 @@ class Analysis extends Component {
       xl: 6,
       style: { marginBottom: 24 },
     };
-
+    console.log("饼图需要的数据salesData: ", salesData);
     return (
+      
       <GridContent>
         <Row gutter={24}>
           <Col {...topColResponsiveProps}>

@@ -18,6 +18,84 @@ export default [
     authority: ['admin', 'user'],
     // authority: ['alice'],
     routes: [
+      // echarts数据图
+      //折线图
+      {
+        path: '/echarts/line',
+        component: './mypage/Mypage',
+        name: 'Line',
+        routes: [],
+      },
+      //饼图
+      {
+        path: '/echarts/pie',
+        component: './EchartsPage/PiePage',
+        name: 'Pie',
+        routes: [],
+      },
+      //柱状图
+      {
+        path: '/echarts/bar',
+        component: './EchartsPage/BarPage',
+        name: 'Bar',
+        routes: [],
+      },
+      //散点图
+      {
+        path: '/echarts/scatter',
+        component: './mypage/Mypage',
+        name: 'Scatter',
+        routes: [],
+      },
+      //K线图
+      {
+        path: '/echarts/candlestick',
+        component: './mypage/Mypage',
+        name: 'Candlestick',
+        routes: [],
+      },
+       //雷达图
+       {
+        path: '/echarts/radar',
+        component: './mypage/Mypage',
+        name: 'Radar',
+        routes: [],
+      },
+      //平行坐标图
+      {
+        path: '/echarts/parallel',
+        component: './mypage/Mypage',
+        name: 'Parallel',
+        routes: [],
+      },
+       //桑基图
+       {
+        path: '/echarts/sankey',
+        component: './mypage/Mypage',
+        name: 'Sankey',
+        routes: [],
+      },
+      //仪表盘
+      {
+        path: '/echarts/gauge',
+        component: './mypage/Mypage',
+        name: 'Gauge',
+        routes: [],
+      },
+      //漏斗图
+      {
+        path: '/echarts/funnel',
+        component: './mypage/Mypage',
+        name: 'Funnel',
+        routes: [],
+      },
+      //数据集
+      {
+        path: '/echarts/dataset',
+        component: './mypage/Mypage',
+        name: 'Dataset',
+        routes: [],
+      },
       // new
       {
         path: '/new',
