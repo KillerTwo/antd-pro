@@ -11,6 +11,7 @@ import { enquireScreen, unenquireScreen } from 'enquire-js';
 import { formatMessage } from 'umi/locale';
 import SiderMenu from '@/components/SiderMenu';
 import Authorized from '@/utils/Authorized';
+// 个性化设置选项组件
 import SettingDrawer from '@/components/SettingDrawer';
 // import logo from '../assets/logo.svg';
 // import logo from '../assets/title-01.svg';

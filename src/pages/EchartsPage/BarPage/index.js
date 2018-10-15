@@ -1,7 +1,6 @@
 import React from 'react';
-import {
-    Bar,
-  } from '@/components/Charts';
+import Bar from '@/components/EchartsComponent/Bar';
+import { Card, Row } from 'antd';
   import { FormattedMessage } from 'umi/locale';
 // import { connect } from 'dva';
 // @connect(({ customers, loading }) => ({
@@ -9,56 +8,6 @@ import {
 //   submitting: loading.effects['customers/submit'],
 // }))
 
-const salesData = [
-    {
-    "x": "1月",
-    "y": 918
-    },
-    {
-    "x": "2月",
-    "y": 744
-    },
-    {
-    "x": "3月",
-    "y": 1059
-    },
-    {
-    "x": "4月",
-    "y": 206
-    },
-    {
-    "x": "5月",
-    "y": 923
-    },
-    {
-    "x": "6月",
-    "y": 510
-    },
-    {
-    "x": "7月",
-    "y": 362
-    },
-    {
-    "x": "8月",
-    "y": 1032
-    },
-    {
-    "x": "9月",
-    "y": 1156
-    },
-    {
-    "x": "10月",
-    "y": 364
-    },
-    {
-    "x": "11月",
-    "y": 384
-    },
-    {
-    "x": "12月",
-    "y": 1063
-    }
-    ];
 
 class BarPage extends React.Component {
 //   componentDidMount() {
@@ -75,20 +24,19 @@ class BarPage extends React.Component {
   
   render() {
     return (
-      <div>
+      
         <div>
-            <Bar
-            height={295}
-            title={
-                <FormattedMessage
-                id="app.analysis.sales-trend"
-                defaultMessage="Sales Trend"
-                />
-            }
-            data={salesData}
-            />
+          <Row>
+            <Col >
+
+            </Col>
+          </Row>
+          <Card title="Card title" bordered={false} >
+            <div>
+              <Bar /> 
+            </div>
+          </Card>
         </div>
-      </div>
     );
   }
 }

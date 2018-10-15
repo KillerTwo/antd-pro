@@ -1,7 +1,6 @@
 {
-  "name": "ant-design-pro",
-  "version": "2.0.0",
-  "description": "An out-of-box UI solution for enterprise applications",
+  "name": "antd-pro",
+  "description": "admin manager",
   "private": true,
   "scripts": {
     "precommit": "npm run lint-staged",
@@ -33,6 +32,7 @@
     "bizcharts-plugin-slider": "^2.0.3",
     "classnames": "^2.2.6",
     "dva": "^2.4.0",
+    "echarts": "^4.2.0-rc.1",
     "enquire-js": "^0.2.1",
     "hash.js": "^1.1.5",
     "lodash": "^4.17.10",
@@ -107,9 +107,11 @@
   ],
   "proxy": {
     "/api": {
-        "target": "http://rap2api.taobao.org/app/mock/86846/",
-        "pathRewrite": {"^/api": ""},
-        "changeOrigin": true
+      "target": "http://rap2api.taobao.org/app/mock/86846/",
+      "pathRewrite": {
+        "^/api": ""
+      },
+      "changeOrigin": true
     }
   }
 }
